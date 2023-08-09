@@ -1,0 +1,133 @@
+.page {
+	font-size: 22px;
+	padding-bottom: 50px;
+}
+
+.title{
+	@include adaptiveValue("font-size", 36, 28);
+	padding-bottom: 30px;
+	text-transform: uppercase;
+	padding-top: 100px;
+}
+
+// show-block ====================================================================================================//
+
+.show-block {
+	min-height: 370px;
+
+		&__title {
+		}
+
+		&__button {
+			background-color: #f9c800;
+			min-width: 200px;
+			padding: 10px 25px;
+			text-transform: uppercase;
+			border-radius: 10px;
+			transition: all 0.3s ease 0s;
+			margin-bottom: 20px;
+			&:hover{
+			background-color: #de8c03;
+			}
+			&:active{
+			background-color: #f32c5e;
+			}
+		}
+
+		&__text {
+			max-width: 500px;
+			border: 2px solid #de8c03;
+			padding: 10px;
+		}
+}
+
+._hidden{
+	display: none;
+}
+
+._hidden-content{
+	transform-origin: 0 0;
+	transform: rotateX(-90deg);
+	//visibility: hidden;
+	//opacity: 0;
+	//display: none;
+}
+
+// accardeon ====================================================================================================//
+
+.accardeon {
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__body {
+	}
+
+	&__sub-title {
+		@include adaptiveValue("font-size", 26, 18);
+		//margin-bottom: 10px;
+		border: 1px solid #de8c03;
+		cursor: pointer;
+		background-color: #fdc566;
+	}
+
+	&__sub-text {
+		//margin-bottom: 30px;
+		transition: all 0.3s ease 0s;
+		border: 1px solid #de8c03;
+		margin-top: -1px;
+	}
+}
+
+// tabs-block ====================================================================================================//
+
+.tabs-block {
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__list {
+		display: flex;
+		gap: 20px;
+		margin-bottom: 40px;
+	}
+
+	&__item {
+		flex: 0 1 150px;
+		height: 50px;
+		background-color: #f9c800;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+		&:hover{
+			background-color: #de8c03;
+		}
+	}
+
+	&__content {
+		border: 2px solid #de8c03;
+		padding: 10px 15px;
+		margin-bottom: 20px;
+		background-color: #6cad56;
+		h3 {
+			text-transform: uppercase;
+			padding-left: 15px;
+			padding-bottom: 10px;
+		}
+		&#tab-2{
+			background-color: #f44672;
+		}
+		&#tab-3{
+			background-color: #f9c800;
+		}
+	}
+}
