@@ -10,6 +10,10 @@
 	padding-top: 100px;
 }
 
+._hidden{
+	display: none;
+}
+
 // show-block ====================================================================================================//
 
 .show-block {
@@ -41,9 +45,6 @@
 		}
 }
 
-._hidden{
-	display: none;
-}
 
 ._hidden-content{
 	transform-origin: 0 0;
@@ -129,5 +130,84 @@
 		&#tab-3{
 			background-color: #f9c800;
 		}
+	}
+}
+
+// modal ====================================================================================================//
+
+.modal {
+
+	&__container {
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&__button {
+		background-color: #f9c800;
+		min-height: 50px;
+		width: 350px;
+		padding: 10px;
+		text-transform: uppercase;
+		transition: all 0.3s ease 0s;
+		&:hover{
+			background-color: #de8c03;
+		}
+	}
+
+	&__block {
+		display: none;
+	}
+}
+.modal__block._active{
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(#000, .7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.window-block {
+	background-color: #fff;
+	max-width: 800px;
+	padding: 20px 30px;
+	border-radius: 20px;
+
+	&__sub-title {
+		@include adaptiveValue("font-size", 26, 18);
+		text-transform: uppercase;
+		padding-bottom: 20px;
+	}
+
+	&__text {
+		padding-bottom: 30px;
+	}
+
+	&__button {
+		background-color: #f9c800;
+		padding: 15px;
+		border-radius: 10px;
+		transition: all 0.3s ease 0s;
+		&:hover{
+			background-color: #de8c03;
+		}
+		&:active{
+			background-color: #f32c5e;
+		}
+	}
+}
+
+body{
+	&.blocked {
+		overflow: hidden;
+		touch-action: none;
 	}
 }
